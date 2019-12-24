@@ -1,0 +1,70 @@
+
+GPIO工作原理
+{
+	GPIO工作方式 ---> 所有GPIO口都可以作为中断输入
+	{
+		输入模式
+		{
+			1、输入浮空模式
+			2、输入上拉模式
+			3、输入下拉模式
+			4、模拟输入模式		//常见的A/D转换
+		}
+		
+		输出模式
+		{
+			1、开漏输出模式
+			{
+				特点：只可以输出强低电平，高电平需要靠外部电阻拉高
+			}
+			
+			2、开漏复用输出模式
+			3、推挽输出模式
+			{
+				特点：可以输出强高低电平，连接数字器件
+			}
+			
+			4、推挽复用输出模式
+		}
+	}
+	
+	GPIO相关配置寄存器
+	{
+		4 个 32 位配置寄存器(GPIOx_MODER、GPIOx_OTYPER、GPIOx_OSPEEDR 和 GPIOx_PUPDR)
+		2 个 32 位数据寄存器(GPIOx_IDR 和GPIOx_ODR)
+		1 个 32 位置位/复位寄存器 (GPIOx_BSRR)
+		1 个 32 位锁定寄存器(GPIOx_LCKR)
+		2 个 32 位复用功能选择寄存器(GPIOx_AFRH 和 GPIOx_AFRL)
+	}
+	
+	GPIO库函数介绍
+	{
+		一个初始化函数：
+			void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
