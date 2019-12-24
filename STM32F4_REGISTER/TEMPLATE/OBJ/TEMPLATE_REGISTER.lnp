@@ -1,0 +1,10 @@
+--cpu Cortex-M4.fp
+"..\obj\startup_stm32f40_41xxx.o"
+"..\obj\delay.o"
+"..\obj\sys.o"
+"..\obj\usart.o"
+"..\obj\main.o"
+--strict --scatter "..\OBJ\TEMPLATE_REGISTER.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\TEMPLATE_REGISTER.map" -o ..\OBJ\TEMPLATE_REGISTER.axf
